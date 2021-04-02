@@ -16,12 +16,73 @@
         <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
             <a class="navbar-brand" href="#">
                 <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
-                <span class="ml-2">Task Master</span>
+                <span class="mt-2">Task Master</span>
             </a>
         </nav>
+        <div class="row flex-direction-column">
+            <div class="col d-flex justify-content-center">
+                <div>
+                    <h1>Task Master</h1>
+                </div>
+                <div>
+                    <form class="bg-white rounded p-3" onsubmit="app.pizzasController.addPizza()">
+                        <div class="form-group d-flex">
+                            <div>
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Name..."
+                                    aria-describedby="helpId" required min="2" max="15">
+                            </div>
+                            <div class="ml-3">
+                                <label for="size">Color</label>
+                                <select class="custom-select" id="size" aria-label="size select" required>
+                                    <option value="small">Red</option>
+                                    <option value="medium">Blue</option>
+                                    <option value="small">Grey</option>
+                                    <option value="medium">Yellow</option>
+                                    <option selected value="large">Peach</option>
+                                </select>
+                            </div>
+                            <div class="ml-3 d-flex align-items-end">
+                                <button type="submit" class="btn btn-success" title='add pizza'><i
+                                        class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
     </header>
     <main>
-        <div id="app"></div>
+        <div class="row" id="">
+            <!--NOTE need add id back when ready it hides it "lists"-->
+            <!-- NOTE this is the HTML for a single list, it will be repeated for each list and injected from the -->
+            <div class="col-md-4 mt-5 mb-3 ml-5 card shadow">
+                <div class="d-flex card-header justify-content-center align-items-center">
+                    <ph1>Groceries</ph1>
+                    <h3>1/4</h3>
+                </div>
+                <!--Checkbox-->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Task Name
+                    </label>
+                </div>
+                <!--End Checkbox-->
+                <div class="d-flex justify-content-center">
+                    <div class="form-group">
+                        <label for="imgUrl"></label>
+                        <input type="text" class="form-control" id="taskName" placeholder="Add task...">
+                    </div>
+                    <div class="px-3 pb-3 d-flex justify-content-between">
+                        <button type="button" class="btn btn-danger">+</button>
+                    </div>
+                </div>
+            </div>
+            <!--End List-->
+        </div>
     </main>
     <footer class="container-fluid bg-dark text-light">
         <div class="row text-center">

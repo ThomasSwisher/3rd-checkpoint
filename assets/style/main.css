@@ -10695,4 +10695,10 @@ main {
   flex-grow: 1;
 }
 
+.card-header {
+  background-color: lightblue;
+  min-height: 150px!important;
+  flex-direction: column;
+}
+
 /*# sourceMappingURL=main.css.map */

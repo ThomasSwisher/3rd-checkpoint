@@ -7,15 +7,15 @@ class ListsService {
         let list = new List(newList.listName, newList.color, newList.taskName)
         ProxyState.lists = [...ProxyState.lists, list]
     }
-    bid(id) {
-        // find the Car
-        let car = ProxyState.cars.find(car => car.id === id)
-        // make the change
-        car.price += 100
+    // bid(id) {
+    //     // find the Car
+    //     let car = ProxyState.cars.find(car => car.id === id)
+    //     // make the change
+    //     car.price += 100
 
-        // trigger the cycle (this can only be the top level properties of ProxyState) to update the page
-        ProxyState.cars = ProxyState.cars
-    }
+    //     // trigger the cycle (this can only be the top level properties of ProxyState) to update the page
+    //     ProxyState.cars = ProxyState.cars
+    // }
     deleteCar(id) {
         // remove the car with that id from the array
         // trigger the update cycle by setting the value of ProxyState.cars

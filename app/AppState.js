@@ -1,12 +1,15 @@
-import Value from "./Models/Value.js"
+import List from "./Models/List.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
+//  /** @type {List[]} */ gives array access to intellisense
 class AppState extends EventEmitter {
-  /** @type {Value[]} */
-  values = []
+  /** @type {List[]} */
+  lists = []
+
 }
 
+// Magic
 export const ProxyState = new Proxy(new AppState(), {
   get(target, prop) {
     isValidProp(target, prop)
